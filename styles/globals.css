@@ -14,3 +14,30 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+/*------Hero--------*/
+
+.hero-banner-container{
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.hero-image{
+  display: block;
+}
+
+.product-text{
+  margin: 0;
+}
+
+
+
+
+/*------Navbar--------*/
+/*------Layout--------*/
+/*------Product--------*/
+/*------Basket--------*/
+/*------Hero--------*/

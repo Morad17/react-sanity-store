@@ -9,7 +9,7 @@ import Product from '../components/Product'
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      <Hero />
+      <Hero heroBanner={bannerData.length && bannerData[0]}/>
 
       <div className="">
         <h2>Best Selling Products</h2>

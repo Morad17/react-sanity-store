@@ -92,6 +92,26 @@ a {
 }
 
 /*------Layout--------*/
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.footer-container p{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  font-size: 17px;
+}
+
+.icons svg{
+  font-size: 2rem;
+  color: orange;
+  margin:5px 10px;
+}
+
 /*------Product--------*/
 
 .product-list{
@@ -102,11 +122,14 @@ a {
 .product-card{
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .product-image{
   width: 250px;
   height: 250px;
 }
+
+
 /*------Basket--------*/
 /*------Footer Hero--------*/
 
@@ -120,6 +143,14 @@ a {
 }
 
 .footer-banner-image{
-  width: 25%;
+  width: 12.5%;
   position: absolute;
+}
+
+/*----MediaQuery---*/
+
+@media ( max-width: 840px){
+  .footer-banner-image{
+    width: 25%;
+  }
 }

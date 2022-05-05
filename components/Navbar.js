@@ -12,11 +12,10 @@ const Navbar = () => {
       <div className="logo">
         <Link href="/">Hoodie Store</Link>
       </div>
-
-      <button type="button" className="basket-icon" onClick="">
+      <button type="button" className="basket-icon" onClick={()=> setShowBasket(true)}>
         <AiOutlineShopping /><span className="basket-item-qty">{totalQuantities}</span>
       </button>
-      <Basket />
+      { showBasket &&< Basket /> }
     </div>
   )
 }

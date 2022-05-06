@@ -99,7 +99,7 @@ const Basket = () => {
             <div className="btn-container">
               <button 
                 type="button" 
-                className="button1" 
+                className="button-1" 
                 onClick={handleCheckout}>Pay With Stripe</button>
             </div>
           </div>

@@ -8,11 +8,19 @@ import { useStateContext } from '../../context/StateContext'
 
 const ProductDetails = ({ product, products }) => {
 
-    const { image, name, details, price } = product
+    const { image, name, details, price} = product
     const [index, setIndex ] = useState(0)
-    const { decQty, incQty, qty, onAdd } = useStateContext()
+    const { decQty, incQty, qty, onAdd, setShowBasket } = useStateContext()
 
+
+    const handleBuyNow = () => {
+        onAdd(product, qty)
+
+        setShowBasket(true)
+    }
   return (
+    
+
     <div>
         <div className="product-detail-container">
             <div className="">
@@ -20,7 +28,7 @@ const ProductDetails = ({ product, products }) => {
                     <img src={urlFor(image && image[index])} alt="product-image" />
                 </div>
                 <div className="small-images-container">
-                    {image?.map((item,i) => (
+                    {image?.map((item, i) => (
                         <img 
                             src={urlFor(item)}
                             key={i}
@@ -50,13 +58,13 @@ const ProductDetails = ({ product, products }) => {
                         <h3>Quantity:</h3>
                         <p className="quantity-description">
                             <span className="minus" onClick={decQty}><AiOutlineMinus /></span>
-                            <span className="num" onClick="">{qty}</span>
+                            <span className="num">{qty}</span>
                             <span className="plus" onClick={incQty}><AiOutlinePlus /></span>
                         </p>
                     </div>
                     <div className="buttons">
                         <button type="button" className="add-to-basket" onClick={() => onAdd(product, qty)}>Add To Basket</button>
-                        <button type="button" className="buy-now">Buy Now</button>
+                        <button type="button" className="buy-now" onClick={handleBuyNow}>Buy Now</button>
                     </div>
                 </div>
             </div>
